@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.*;
 public class Example {
 
     @RequestMapping("/")
-    String home() {
-        return "Hello World - v3!";
+    public String home() {
+        return "COntext root path for springboot rest service!";
     }
 
     public static void main(String[] args) throws Exception {

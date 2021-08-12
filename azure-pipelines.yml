@@ -30,25 +30,26 @@ stages:
       vmImage: $(vmImageName)
 
     steps: 
-    - task: SonarCloudPrepare@1
-      inputs:
-        SonarCloud: $(projnameprefix)
-        organization: 'genericorg-1'
-        projectKey: $(projnameprefix)
-        projectName: $(projnameprefix)
-        scannerMode: 'Other'
+    #- task: SonarCloudPrepare@1
+      #inputs:
+        #SonarCloud: $(projnameprefix)
+        #organization: 'genericorg-1'
+        #projectKey: $(projnameprefix)
+        #projectName: $(projnameprefix)
+        #scannerMode: 'Other'
+        ######extraProperties: |
+          ####sonar.coverage.jacoco.xmlReportPaths=CCReport43F6D5EF/jacoco.xml
         #extraProperties: |
-          #sonar.coverage.jacoco.xmlReportPaths=CCReport43F6D5EF/jacoco.xml
-        extraProperties: |
-          sonar.host.url=https://sonarcloud.io
-          sonar.projectKey=$(projnameprefix)
-          sonar.organization=genericorg-1          
+          #sonar.host.url=https://sonarcloud.io
+          #sonar.projectKey=$(projnameprefix)
+          #sonar.organization=genericorg-1          
       
     - task: Maven@3
       displayName: 'Maven Package'
       inputs:
         mavenPomFile: 'pom.xml'
-        goals: 'clean verify sonar:sonar package'
+        #goals: 'clean verify sonar:sonar package'
+        goals: 'package'
         options: '-Dmaven.test.failure.ignore=true'
         mavenOptions: '-Xmx3072m'
         javaHomeOption: 'JDKVersion'
@@ -56,19 +57,19 @@ stages:
         jdkArchitectureOption: 'x64'
         mavenAuthenticateFeed: false
         effectivePomSkip: false
-        publishJUnitResults: true #updated from false to true
+        publishJUnitResults: false #updated from false to true
         testResultsFiles: '**/TEST-*.xml' #'**/TEST-*.xml'
-        codeCoverageToolOption: 'JaCoCo'
-        sonarCloudRunAnalysis: true
-        sqMavenPluginVersionChoice: 'latest'
+        #codeCoverageToolOption: 'JaCoCo'
+        #sonarCloudRunAnalysis: true
+        #sqMavenPluginVersionChoice: 'latest'
         
  
     #- task: SonarCloudAnalyze@1
  
-    - task: SonarCloudPublish@1
-      displayName: 'Publish results on build summary'
-      inputs:
-        pollingTimeoutSec: '300'
+    #- task: SonarCloudPublish@1
+      #displayName: 'Publish results on build summary'
+      #inputs:
+        #pollingTimeoutSec: '300'
  
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'

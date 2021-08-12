@@ -50,13 +50,13 @@ stages:
         mavenPomFile: 'pom.xml'
         #goals: 'clean verify sonar:sonar package'
         goals: 'package'
-        options: '-Dmaven.test.failure.ignore=true'
+        #options: '-Dmaven.test.failure.ignore=true'
         mavenOptions: '-Xmx3072m'
         javaHomeOption: 'JDKVersion'
         jdkVersionOption: '1.11'
         jdkArchitectureOption: 'x64'
-        mavenAuthenticateFeed: false
-        effectivePomSkip: false
+        #mavenAuthenticateFeed: false
+        #effectivePomSkip: false
         publishJUnitResults: false #updated from false to true
         testResultsFiles: '**/TEST-*.xml' #'**/TEST-*.xml'
         #codeCoverageToolOption: 'JaCoCo'

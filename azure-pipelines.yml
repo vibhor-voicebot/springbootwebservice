@@ -9,13 +9,13 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'msisgarm'
+  azureSubscription: 'isgdivarm'
 
   # Web app name
-  webAppName: 'msisgservice'
+  webAppName: 'isgdivservice'
 
   # projnameprefix
-  projnameprefix: 'msisg'
+  projnameprefix: 'isgdiv'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -49,7 +49,7 @@ stages:
       inputs:
         mavenPomFile: 'pom.xml'
         goals: 'clean verify sonar:sonar package'
-        goals: 'package'
+        #goals: 'package'
         options: '-Dmaven.test.failure.ignore=true'
         mavenOptions: '-Xmx3072m'
         javaHomeOption: 'JDKVersion'

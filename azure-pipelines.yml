@@ -9,13 +9,13 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'msopsarm'
+  azureSubscription: 'msisgarm'
 
   # Web app name
-  webAppName: 'msopsservice'
+  webAppName: 'msisgservice'
 
   # projnameprefix
-  projnameprefix: 'msops'
+  projnameprefix: 'msisg'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'

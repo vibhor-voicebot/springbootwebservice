@@ -9,13 +9,13 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'isgdivarm'
+  azureSubscription: 'isgwmarm'
 
   # Web app name
-  webAppName: 'isgdivservice'
+  webAppName: 'isgwmservice'
 
   # projnameprefix
-  projnameprefix: 'isgdiv'
+  projnameprefix: 'isgwm'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'

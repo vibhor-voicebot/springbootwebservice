@@ -32,7 +32,7 @@ stages:
     steps: 
     - task: SonarCloudPrepare@1
       inputs:
-        SonarCloud: $(projnameprefix)
+        SonarCloud: $(projnameprefix)sc
         organization: 'genericorg-1'
         projectKey: $(projnameprefix)
         projectName: $(projnameprefix)

@@ -9,13 +9,13 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'eutpmarm'
+  azureSubscription: 'eutemarm'
 
   # Web app name
-  webAppName: 'eutpmservice'
+  webAppName: 'eutemservice'
 
   # projnameprefix
-  projnameprefix: 'eutpm'
+  projnameprefix: 'eutem'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'

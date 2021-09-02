@@ -9,13 +9,13 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'springarm'
+  azureSubscription: 'jvmpmarm'
 
   # Web app name
-  webAppName: 'springservice'
+  webAppName: 'jvmpmservice'
 
   # projnameprefix
-  projnameprefix: 'spring'
+  projnameprefix: 'jvmpm'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'

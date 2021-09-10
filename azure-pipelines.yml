@@ -9,13 +9,13 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'jqvalarm'
+  azureSubscription: 'jremaparm'
 
   # Web app name
-  webAppName: 'jqvalservice'
+  webAppName: 'jremapservice'
 
   # projnameprefix
-  projnameprefix: 'jqval'
+  projnameprefix: 'jremap'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'

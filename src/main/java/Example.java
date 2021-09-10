@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableAutoConfiguration
 public class Example {
 
-    @RequestMapping("/home")
+    @RequestMapping("/index")
     public String home() {
         return "Context root path for springboot restful controller!";
     }

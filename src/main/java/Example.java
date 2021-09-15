@@ -9,7 +9,7 @@ public class Example {
 
     @RequestMapping("/index")
     public String home() {
-        return "Context root path for springboot restful controller!";
+        return "Context root-path for springboot restful controller!";
     }
 
     public static void main(String[] args) throws Exception {

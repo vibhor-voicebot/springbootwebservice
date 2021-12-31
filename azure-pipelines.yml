@@ -9,13 +9,13 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'nlpaiarm'
+  azureSubscription: 'mlaiarm'
 
   # Web app name
-  webAppName: 'nlpaiservice'
+  webAppName: 'mlaiservice'
 
   # projnameprefix
-  projnameprefix: 'nlpai'
+  projnameprefix: 'mlai'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
